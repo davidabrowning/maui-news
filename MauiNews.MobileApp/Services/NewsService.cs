@@ -11,8 +11,9 @@ namespace MauiNews.MobileApp.Services
 {
     public class NewsService
     {
+        public string SearchTerm { get; set; } = string.Empty;
         private readonly HttpClient _httpClient;
-        private string _urlBase = "https://newsapi.org/v2/everything?q=keyword&apiKey=";
+        private string _urlBase = $"https://newsapi.org/v2/everything";
         private readonly string _apiKey = "96f9e2bd33a44349b2880c91352a9f66";
 
         public NewsService(HttpClient httpClient)
@@ -26,7 +27,7 @@ namespace MauiNews.MobileApp.Services
             List<Article> articles = new();
             try
             {
-                string url = $"{_urlBase}{_apiKey}";
+                string url = $"{_urlBase}?q={SearchTerm}&apiKey={_apiKey}";
                 var response = await _httpClient.GetAsync(url);
                 var news = await response.Content.ReadFromJsonAsync<NewsApiResponse>();
                 if (news != null && news.Status == "ok")
