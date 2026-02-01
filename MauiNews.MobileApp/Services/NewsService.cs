@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,20 +12,36 @@ namespace MauiNews.MobileApp.Services
     public class NewsService
     {
         private readonly HttpClient _httpClient;
+        private string _urlBase = "https://newsapi.org/v2/everything?q=keyword&apiKey=";
+        private readonly string _apiKey = "96f9e2bd33a44349b2880c91352a9f66";
 
         public NewsService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("DavidsMauiNewsApp/1.0");
         }
 
         public async Task<List<Article>> GetArticlesAsync()
         {
-            await Task.Delay(100);
-            return new List<Article>() {
-                new Article() {Title = "NYT Headline 1 from newsservice"},
-                new Article() {Title = "WSJ Headline 2 from newsservice"},
-                new Article() {Title = "Reuters Headline 3 from newsservice"},
-            };
+            List<Article> articles = new();
+            try
+            {
+                string url = $"{_urlBase}{_apiKey}";
+                var response = await _httpClient.GetAsync(url);
+                var news = await response.Content.ReadFromJsonAsync<NewsApiResponse>();
+                if (news != null && news.Status == "ok")
+                {
+                    foreach (var article in news.Articles)
+                    {
+                        articles.Add(article);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return articles;
         }
     }
 }
