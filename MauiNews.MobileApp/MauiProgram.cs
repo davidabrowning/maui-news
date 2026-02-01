@@ -19,7 +19,8 @@ namespace MauiNews.MobileApp
 
             builder.Services.AddScoped<HttpClient>();
             builder.Services.AddScoped<NewsService>();
-            builder.Services.AddScoped<MainPageViewModel>();
+            builder.Services.AddSingleton<MainPageViewModel>();
+            builder.Services.AddSingleton<DetailPageViewModel>();
 
 #if DEBUG
             builder.Logging.AddDebug();

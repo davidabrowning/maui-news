@@ -1,15 +1,18 @@
-﻿using MauiNews.MobileApp.ViewModels;
+﻿using Core.Models;
+using MauiNews.MobileApp.ViewModels;
 
 namespace MauiNews.MobileApp.Pages
 {
     public partial class MainPage : ContentPage
     {
+        private DetailPageViewModel _detailPageViewModel;
         int count = 0;
 
-        public MainPage(MainPageViewModel mainPageViewModel)
+        public MainPage(MainPageViewModel mainPageViewModel, DetailPageViewModel detailPageViewModel)
         {
             InitializeComponent();
             BindingContext = mainPageViewModel;
+            _detailPageViewModel = detailPageViewModel;
         }
 
         private void OnCounterClicked(object? sender, EventArgs e)
@@ -26,7 +29,10 @@ namespace MauiNews.MobileApp.Pages
 
         private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            await Navigation.PushAsync(new DetailPage());
+            Article article = (Article)e.CurrentSelection.FirstOrDefault();
+            DetailPage detailPage = new(_detailPageViewModel);
+            detailPage.SetArticle(article);
+            await Navigation.PushAsync(detailPage);
         }
     }
 }
