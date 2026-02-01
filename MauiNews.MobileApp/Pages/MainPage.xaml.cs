@@ -1,6 +1,6 @@
 ﻿using MauiNews.MobileApp.ViewModels;
 
-namespace MauiNews.MobileApp
+namespace MauiNews.MobileApp.Pages
 {
     public partial class MainPage : ContentPage
     {
@@ -22,6 +22,11 @@ namespace MauiNews.MobileApp
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new DetailPage());
         }
     }
 }
