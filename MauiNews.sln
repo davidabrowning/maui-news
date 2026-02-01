@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiNews.ConsoleApp", "Maui
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{EB759B8C-255C-40A2-9E26-0A6A13A876FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiNews.MauiApp", "MauiNews.MauiApp\MauiNews.MauiApp.csproj", "{9C535D72-CDA7-4DF2-9E6E-D6A988D9E821}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiNews.MobileApp", "MauiNews.MobileApp\MauiNews.MobileApp.csproj", "{02A2AF74-5840-4F30-98CC-FFD2B90B7D38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,11 @@ Global
 		{EB759B8C-255C-40A2-9E26-0A6A13A876FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB759B8C-255C-40A2-9E26-0A6A13A876FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB759B8C-255C-40A2-9E26-0A6A13A876FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C535D72-CDA7-4DF2-9E6E-D6A988D9E821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C535D72-CDA7-4DF2-9E6E-D6A988D9E821}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C535D72-CDA7-4DF2-9E6E-D6A988D9E821}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C535D72-CDA7-4DF2-9E6E-D6A988D9E821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A2AF74-5840-4F30-98CC-FFD2B90B7D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A2AF74-5840-4F30-98CC-FFD2B90B7D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A2AF74-5840-4F30-98CC-FFD2B90B7D38}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{02A2AF74-5840-4F30-98CC-FFD2B90B7D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A2AF74-5840-4F30-98CC-FFD2B90B7D38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
