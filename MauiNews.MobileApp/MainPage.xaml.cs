@@ -6,10 +6,10 @@ namespace MauiNews.MobileApp
     {
         int count = 0;
 
-        public MainPage()
+        public MainPage(MainPageViewModel mainPageViewModel)
         {
             InitializeComponent();
-            BindingContext = new MainPageViewModel();
+            BindingContext = mainPageViewModel;
         }
 
         private void OnCounterClicked(object? sender, EventArgs e)

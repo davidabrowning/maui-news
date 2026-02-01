@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiNews.MobileApp.Services;
+using MauiNews.MobileApp.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace MauiNews.MobileApp
 {
@@ -15,8 +17,12 @@ namespace MauiNews.MobileApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddScoped<HttpClient>();
+            builder.Services.AddScoped<NewsService>();
+            builder.Services.AddScoped<MainPageViewModel>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
