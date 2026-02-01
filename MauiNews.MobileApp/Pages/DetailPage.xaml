@@ -5,21 +5,34 @@
              Title="ArticleDetailPage">
     <VerticalStackLayout>
         <Image
-                Source="{Binding Path=ArticleUrlToImage}"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="article image fetched from api" />
+            Source="{Binding Path=ArticleUrlToImage}"
+            WidthRequest="600"
+            Aspect="AspectFit"
+            SemanticProperties.Description="article image fetched from api"
+            Margin="10" />
+
+        <Label 
+            Text="{Binding Path=ArticleSourceName}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            WidthRequest="600"
+            FontSize="12"
+            Margin="10" />
 
         <Label 
             Text="{Binding Path=ArticleTitle}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
-            FontSize="24" />
+            WidthRequest="600"
+            FontSize="24"
+            Margin="10" />
 
         <Label 
             Text="{Binding Path=ArticleContent}"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            FontSize="16" />
+            WidthRequest="600"
+            FontSize="16"
+            Margin="10" />
     </VerticalStackLayout>
 </ContentPage>

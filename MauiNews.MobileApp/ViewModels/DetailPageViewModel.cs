@@ -42,6 +42,17 @@ namespace MauiNews.MobileApp.ViewModels
             }
         }
 
+        public string articleSourceName = string.Empty;
+        public string ArticleSourceName
+        {
+            get { return articleTitle; }
+            set
+            {
+                articleTitle = value;
+                OnPropertyChanged(nameof(ArticleSourceName));
+            }
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)
