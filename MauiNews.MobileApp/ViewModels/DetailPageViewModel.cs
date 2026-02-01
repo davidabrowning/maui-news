@@ -10,13 +10,35 @@ namespace MauiNews.MobileApp.ViewModels
 {
     public class DetailPageViewModel : INotifyPropertyChanged
     {
-        public string articleTitle = "Lorem ipsum default title";
+        public string articleTitle = string.Empty;
         public string ArticleTitle
         {
             get { return articleTitle; }
             set {
                 articleTitle = value;
                 OnPropertyChanged(nameof(ArticleTitle));
+            }
+        }
+
+        public string articleContent = string.Empty;
+        public string ArticleContent
+        {
+            get { return articleTitle; }
+            set
+            {
+                articleTitle = value;
+                OnPropertyChanged(nameof(ArticleContent));
+            }
+        }
+
+        public string articleUrlToImage = string.Empty;
+        public string ArticleUrlToImage
+        {
+            get { return articleTitle; }
+            set
+            {
+                articleTitle = value;
+                OnPropertyChanged(nameof(ArticleUrlToImage));
             }
         }
 

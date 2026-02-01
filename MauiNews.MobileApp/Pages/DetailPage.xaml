@@ -4,9 +4,22 @@
              x:Class="MauiNews.MobileApp.Pages.DetailPage"
              Title="ArticleDetailPage">
     <VerticalStackLayout>
+        <Image
+                Source="{Binding Path=ArticleUrlToImage}"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="article image fetched from api" />
+
         <Label 
             Text="{Binding Path=ArticleTitle}"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            FontSize="24" />
+
+        <Label 
+            Text="{Binding Path=ArticleContent}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="16" />
     </VerticalStackLayout>
 </ContentPage>
