@@ -3,24 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiNews.MobileApp.Pages.MainPage"
              Title="Dave's MAUI News">
-    <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-
-        <CollectionView ItemsSource="{Binding Path=Articles}" 
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <CollectionView ItemsSource="{Binding Path=Articles}" 
                         SelectionMode="Single" 
                         SelectionChanged="CollectionView_SelectionChanged"
                         WidthRequest="800">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Label
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label
                             Text="{Binding Path=Title}"
                             FontSize="16"
                             Padding="8" >
-                    </Label>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
-    </VerticalStackLayout>
+                        </Label>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
