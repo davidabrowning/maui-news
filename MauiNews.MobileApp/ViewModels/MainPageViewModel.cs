@@ -19,7 +19,6 @@ namespace MauiNews.MobileApp.ViewModels
             LoadNews();
         }
 
-        public string Title { get; } = "Maui News";
         public ObservableCollection<Article> Articles { get; } = new();
 
         private async void LoadNews()
