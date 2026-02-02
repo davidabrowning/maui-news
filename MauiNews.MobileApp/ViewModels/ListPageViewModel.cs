@@ -1,19 +1,14 @@
 ﻿using Core.Models;
 using MauiNews.MobileApp.Services;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MauiNews.MobileApp.ViewModels
 {
-    public class MainPageViewModel
+    public class ListPageViewModel
     {
         private readonly NewsService _newsService;
 
-        public MainPageViewModel(NewsService newsService)
+        public ListPageViewModel(NewsService newsService)
         {
             _newsService = newsService;
             LoadNews();

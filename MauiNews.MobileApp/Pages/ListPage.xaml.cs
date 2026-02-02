@@ -3,13 +3,13 @@ using MauiNews.MobileApp.ViewModels;
 
 namespace MauiNews.MobileApp.Pages
 {
-    public partial class MainPage : ContentPage
+    public partial class ListPage : ContentPage
     {
 
-        public MainPage(MainPageViewModel mainPageViewModel)
+        public ListPage(ListPageViewModel listPageViewModel)
         {
             InitializeComponent();
-            BindingContext = mainPageViewModel;
+            BindingContext = listPageViewModel;
         }
 
         private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)

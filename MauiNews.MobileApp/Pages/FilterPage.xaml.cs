@@ -19,11 +19,11 @@ public partial class FilterPage : ContentPage
 	{
 		Button button = (Button)sender;
 		_newsService.SearchTerm = button.Text;
-		MainPage mainPage = new MainPage(new MainPageViewModel(_newsService));
-        await Navigation.PushAsync(mainPage);
+		ListPage listPage = new ListPage(new ListPageViewModel(_newsService));
+        await Navigation.PushAsync(listPage);
     }
 
-	private async void RandomizeButton_Clicked(object sender, EventArgs e)
+	private void RandomizeButton_Clicked(object sender, EventArgs e)
 	{
 		_filterPageViewModel.RandomizeSearchTerms();
 	}
