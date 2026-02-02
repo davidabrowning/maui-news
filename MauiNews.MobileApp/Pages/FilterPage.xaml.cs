@@ -22,4 +22,9 @@ public partial class FilterPage : ContentPage
 		MainPage mainPage = new MainPage(new MainPageViewModel(_newsService));
         await Navigation.PushAsync(mainPage);
     }
+
+	private async void RandomizeButton_Clicked(object sender, EventArgs e)
+	{
+		_filterPageViewModel.RandomizeSearchTerms();
+	}
 }

@@ -29,5 +29,13 @@
             Margin="15"
             WidthRequest="400"
             />
+
+        <Button
+            Text="Randomize"
+            Clicked="RandomizeButton_Clicked"
+            Margin="15"
+            WidthRequest="400"
+            Background="Beige"
+            />
     </VerticalStackLayout>
 </ContentPage>
