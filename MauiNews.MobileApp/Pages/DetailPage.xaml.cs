@@ -19,6 +19,7 @@ public partial class DetailPage : ContentPage
 		Article = article;
 		_detailPageViewModel.ArticleTitle = Article.Title;
         _detailPageViewModel.ArticleContent = Article.Content;
+		_detailPageViewModel.ArticleUrl = Article.Url;
 		_detailPageViewModel.ArticleUrlToImage = Article.UrlToImage;
 		_detailPageViewModel.ArticleSourceName = Article.Source.Name;
     }

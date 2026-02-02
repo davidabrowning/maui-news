@@ -34,5 +34,14 @@
             WidthRequest="600"
             FontSize="16"
             Margin="10" />
+
+        <Label 
+            Text="{Binding Path=ArticleUrl}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="600"
+            FontSize="12"
+            Margin="10" />
+        
     </VerticalStackLayout>
 </ContentPage>

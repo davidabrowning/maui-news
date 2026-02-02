@@ -31,6 +31,17 @@ namespace MauiNews.MobileApp.ViewModels
             }
         }
 
+        public string articleUrl = string.Empty;
+        public string ArticleUrl
+        {
+            get { return articleTitle; }
+            set
+            {
+                articleTitle = value;
+                OnPropertyChanged(nameof(ArticleUrl));
+            }
+        }
+
         public string articleUrlToImage = string.Empty;
         public string ArticleUrlToImage
         {
