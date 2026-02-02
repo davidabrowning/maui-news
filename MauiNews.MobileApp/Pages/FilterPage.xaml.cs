@@ -6,10 +6,13 @@ namespace MauiNews.MobileApp.Pages;
 public partial class FilterPage : ContentPage
 {
 	private readonly NewsService _newsService;
+	private readonly FilterPageViewModel _filterPageViewModel;
 	public FilterPage(NewsService newsService)
 	{
 		InitializeComponent();
 		_newsService = newsService;
+		_filterPageViewModel = new();
+		BindingContext = _filterPageViewModel;
 	}
 
 	private async void FilterButton_Clicked(object sender, EventArgs e)

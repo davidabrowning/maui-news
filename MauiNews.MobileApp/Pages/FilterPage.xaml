@@ -10,42 +10,21 @@
             SemanticProperties.HeadingLevel="Level1" />
 
         <Button
-            Text="Apple"
+            Text="{Binding Path=SearchTermA}"
             Clicked="FilterButton_Clicked"
             Margin="15"
             WidthRequest="400"
             />
 
         <Button
-            Text="Google"
+            Text="{Binding Path=SearchTermB}"
             Clicked="FilterButton_Clicked"
             Margin="15"
             WidthRequest="400"
             />
 
         <Button
-            Text="Health"
-            Clicked="FilterButton_Clicked"
-            Margin="15"
-            WidthRequest="400"
-            />
-
-        <Button
-            Text="Mamdani"
-            Clicked="FilterButton_Clicked"
-            Margin="15"
-            WidthRequest="400"
-            />
-
-        <Button
-            Text="Microsoft"
-            Clicked="FilterButton_Clicked"
-            Margin="15"
-            WidthRequest="400"
-            />
-
-        <Button
-            Text="Trump"
+            Text="{Binding Path=SearchTermC}"
             Clicked="FilterButton_Clicked"
             Margin="15"
             WidthRequest="400"
