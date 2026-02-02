@@ -9,7 +9,8 @@
 
         <CollectionView ItemsSource="{Binding Path=Articles}" 
                         SelectionMode="Single" 
-                        SelectionChanged="CollectionView_SelectionChanged">
+                        SelectionChanged="CollectionView_SelectionChanged"
+                        WidthRequest="800">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Label
