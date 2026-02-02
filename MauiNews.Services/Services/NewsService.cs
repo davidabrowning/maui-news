@@ -1,4 +1,4 @@
-﻿using Core.Models;
+﻿using MauiNews.Core.Models;
 using System.Net.Http.Json;
 
 namespace MauiNews.Services.Services

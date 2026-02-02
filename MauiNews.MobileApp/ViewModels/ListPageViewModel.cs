@@ -1,4 +1,4 @@
-﻿using Core.Models;
+﻿using MauiNews.Core.Models;
 using MauiNews.Services.Services;
 using System.Collections.ObjectModel;
 

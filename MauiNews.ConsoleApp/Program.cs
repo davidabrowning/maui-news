@@ -1,4 +1,4 @@
-﻿using Core.Models;
+﻿using MauiNews.Core.Models;
 using NewsAPI;
 using NewsAPI.Constants;
 using NewsAPI.Models;

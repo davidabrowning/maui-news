@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\MauiNews.Core\MauiNews.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using Core.Models;
+﻿using MauiNews.Core.Models;
 
 namespace MauiNews.MobileApp.ViewModels
 {
