@@ -15,10 +15,6 @@ public partial class DetailPage : ContentPage
 
 	public void SetArticle(Article article)
 	{
-		_detailPageViewModel.ArticleTitle = article.Title;
-        _detailPageViewModel.ArticleContent = article.Content;
-		_detailPageViewModel.ArticleUrl = article.Url;
-		_detailPageViewModel.ArticleUrlToImage = article.UrlToImage;
-		_detailPageViewModel.ArticleSourceName = article.Source.Name;
+		_detailPageViewModel.SetArticle(article);
     }
 }

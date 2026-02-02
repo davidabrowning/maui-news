@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -62,6 +63,15 @@ namespace MauiNews.MobileApp.ViewModels
                 articleTitle = value;
                 OnPropertyChanged(nameof(ArticleSourceName));
             }
+        }
+
+        public void SetArticle(Article article)
+        {
+            ArticleTitle = article.Title;
+            ArticleContent = article.Content;
+            ArticleUrl = article.Url;
+            ArticleUrlToImage = article.UrlToImage;
+            ArticleSourceName = article.Source.Name;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
