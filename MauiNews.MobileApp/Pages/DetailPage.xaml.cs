@@ -5,7 +5,6 @@ namespace MauiNews.MobileApp.Pages;
 
 public partial class DetailPage : ContentPage
 {
-	public Article Article { get; set; }
 	private DetailPageViewModel _detailPageViewModel;
 	public DetailPage(DetailPageViewModel detailPageViewModel)
 	{
@@ -16,11 +15,10 @@ public partial class DetailPage : ContentPage
 
 	public void SetArticle(Article article)
 	{
-		Article = article;
-		_detailPageViewModel.ArticleTitle = Article.Title;
-        _detailPageViewModel.ArticleContent = Article.Content;
-		_detailPageViewModel.ArticleUrl = Article.Url;
-		_detailPageViewModel.ArticleUrlToImage = Article.UrlToImage;
-		_detailPageViewModel.ArticleSourceName = Article.Source.Name;
+		_detailPageViewModel.ArticleTitle = article.Title;
+        _detailPageViewModel.ArticleContent = article.Content;
+		_detailPageViewModel.ArticleUrl = article.Url;
+		_detailPageViewModel.ArticleUrlToImage = article.UrlToImage;
+		_detailPageViewModel.ArticleSourceName = article.Source.Name;
     }
 }
