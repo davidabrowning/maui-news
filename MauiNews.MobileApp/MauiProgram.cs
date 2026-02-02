@@ -1,5 +1,4 @@
 ﻿using MauiNews.MobileApp.Services;
-using MauiNews.MobileApp.ViewModels;
 using Microsoft.Extensions.Logging;
 
 namespace MauiNews.MobileApp
