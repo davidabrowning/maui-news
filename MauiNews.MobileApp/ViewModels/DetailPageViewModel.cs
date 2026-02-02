@@ -1,84 +1,15 @@
 ﻿using Core.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MauiNews.MobileApp.ViewModels
 {
-    public class DetailPageViewModel : INotifyPropertyChanged
+    public class DetailPageViewModel
     {
-        public string articleTitle = string.Empty;
-        public string ArticleTitle
-        {
-            get { return articleTitle; }
-            set {
-                articleTitle = value;
-                OnPropertyChanged(nameof(ArticleTitle));
-            }
-        }
+        public required Article Article { get; set; }
+        public string ArticleTitle { get { return Article.Title; } }
+        public string ArticleContent { get { return Article.Content; } }
+        public string ArticleUrl { get { return Article.Url; } }
+        public string ArticleUrlToImage { get { return Article.UrlToImage;  } }
 
-        public string articleContent = string.Empty;
-        public string ArticleContent
-        {
-            get { return articleTitle; }
-            set
-            {
-                articleTitle = value;
-                OnPropertyChanged(nameof(ArticleContent));
-            }
-        }
-
-        public string articleUrl = string.Empty;
-        public string ArticleUrl
-        {
-            get { return articleTitle; }
-            set
-            {
-                articleTitle = value;
-                OnPropertyChanged(nameof(ArticleUrl));
-            }
-        }
-
-        public string articleUrlToImage = string.Empty;
-        public string ArticleUrlToImage
-        {
-            get { return articleTitle; }
-            set
-            {
-                articleTitle = value;
-                OnPropertyChanged(nameof(ArticleUrlToImage));
-            }
-        }
-
-        public string articleSourceName = string.Empty;
-        public string ArticleSourceName
-        {
-            get { return articleTitle; }
-            set
-            {
-                articleTitle = value;
-                OnPropertyChanged(nameof(ArticleSourceName));
-            }
-        }
-
-        public void SetArticle(Article article)
-        {
-            ArticleTitle = article.Title;
-            ArticleContent = article.Content;
-            ArticleUrl = article.Url;
-            ArticleUrlToImage = article.UrlToImage;
-            ArticleSourceName = article.Source.Name;
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        public string ArticleSourceName { get { return Article.Source.Name; } }
     }
 }

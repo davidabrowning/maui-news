@@ -16,7 +16,7 @@ public partial class FilterPage : ContentPage
 	{
 		Button button = (Button)sender;
 		_newsService.SearchTerm = button.Text;
-		MainPage mainPage = new MainPage(new MainPageViewModel(_newsService), new DetailPageViewModel());
+		MainPage mainPage = new MainPage(new MainPageViewModel(_newsService));
         await Navigation.PushAsync(mainPage);
     }
 }

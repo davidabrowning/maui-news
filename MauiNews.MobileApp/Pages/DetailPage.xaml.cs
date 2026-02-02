@@ -12,9 +12,4 @@ public partial class DetailPage : ContentPage
         BindingContext = detailPageViewModel;
 		_detailPageViewModel = detailPageViewModel;
 	}
-
-	public void SetArticle(Article article)
-	{
-		_detailPageViewModel.SetArticle(article);
-    }
 }

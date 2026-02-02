@@ -5,20 +5,18 @@ namespace MauiNews.MobileApp.Pages
 {
     public partial class MainPage : ContentPage
     {
-        private DetailPageViewModel _detailPageViewModel;
 
-        public MainPage(MainPageViewModel mainPageViewModel, DetailPageViewModel detailPageViewModel)
+        public MainPage(MainPageViewModel mainPageViewModel)
         {
             InitializeComponent();
             BindingContext = mainPageViewModel;
-            _detailPageViewModel = detailPageViewModel;
         }
 
         private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Article article = (Article)e.CurrentSelection.FirstOrDefault();
-            DetailPage detailPage = new(_detailPageViewModel);
-            detailPage.SetArticle(article);
+            DetailPageViewModel detailPageViewModel = new() { Article = article };
+            DetailPage detailPage = new(detailPageViewModel);
             await Navigation.PushAsync(detailPage);
         }
     }
