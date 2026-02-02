@@ -1,5 +1,5 @@
 ﻿using Core.Models;
-using MauiNews.MobileApp.Services;
+using MauiNews.Services.Services;
 using System.Collections.ObjectModel;
 
 namespace MauiNews.MobileApp.ViewModels

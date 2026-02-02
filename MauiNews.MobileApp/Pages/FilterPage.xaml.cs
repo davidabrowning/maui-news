@@ -1,5 +1,5 @@
-using MauiNews.MobileApp.Services;
 using MauiNews.MobileApp.ViewModels;
+using MauiNews.Services.Services;
 
 namespace MauiNews.MobileApp.Pages;
 
