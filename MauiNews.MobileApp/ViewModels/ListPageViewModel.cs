@@ -14,6 +14,7 @@ namespace MauiNews.MobileApp.ViewModels
             LoadNews();
         }
 
+        public string SearchTerm { get { return _newsService.SearchTerm; } }
         public ObservableCollection<Article> Articles { get; } = new();
 
         private async void LoadNews()

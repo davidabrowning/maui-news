@@ -5,6 +5,11 @@
              Title="Dave's MAUI News">
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Label
+            Text="{Binding Path=SearchTerm, StringFormat='{}{0} in the news'}"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1" />
+            
             <CollectionView ItemsSource="{Binding Path=Articles}" 
                         SelectionMode="Single" 
                         SelectionChanged="CollectionView_SelectionChanged"
