@@ -18,7 +18,9 @@ namespace MauiNews.MobileApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            builder.Configuration
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true);
 
             builder.Services.AddScoped<HttpClient>();
             builder.Services.AddScoped<NewsService>();
