@@ -1,4 +1,5 @@
 ﻿using MauiNews.Core.Models;
+using Microsoft.Extensions.Configuration;
 using System.Net.Http.Json;
 
 namespace MauiNews.Services.Services
@@ -7,13 +8,15 @@ namespace MauiNews.Services.Services
     {
         public string SearchTerm { get; set; } = string.Empty;
         private readonly HttpClient _httpClient;
-        private string _urlBase = $"https://newsapi.org/v2/everything";
-        private readonly string _apiKey = "96f9e2bd33a44349b2880c91352a9f66";
+        private string _urlBase;
+        private readonly string _apiKey;
 
-        public NewsService(HttpClient httpClient)
+        public NewsService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
             _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("DavidsMauiNewsApp/1.0");
+            _urlBase = configuration["NewsApi:ApiUrlBase"] ?? throw new Exception("Missing api url in appsettings");
+            _apiKey = configuration["NewsApi:ApiKey"] ?? throw new Exception("Missing api key in appsettings");
         }
 
         public async Task<List<Article>> GetArticlesAsync()
